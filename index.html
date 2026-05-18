@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jibonge - Online Therapy & Booking</title>
-    <!-- Tailwind CSS for a modern, beautiful UI -->
+    <title>Jibonge - Online Therapy with Kioko Njeri</title>
+    <!-- Tailwind CSS for a modern, premium UI -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for professional typography -->
+    <!-- Google Fonts for crisp typography -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -18,106 +18,77 @@
 
     <!-- Navigation Header -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-stone-100">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="max-w-md mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-teal-700 tracking-tight">jibonge<span class="text-amber-500">.</span></h1>
             <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full border border-teal-100">Safe Space</span>
         </div>
     </header>
 
-    <main class="max-w-md mx-auto px-4 py-8 space-y-8">
+    <main class="max-w-md mx-auto px-4 py-8 space-y-6">
         
-        <!-- Hero & Therapist Profile Section -->
+        <!-- Therapist Profile Card -->
         <section class="bg-gradient-to-br from-teal-700 to-teal-800 text-white rounded-3xl p-6 shadow-xl relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-teal-600 rounded-full opacity-20 blur-xl"></div>
-            <span class="text-xs font-bold uppercase tracking-widest text-teal-200 bg-teal-900/40 px-3 py-1 rounded-full">Your Therapist</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-teal-200 bg-teal-900/40 px-3 py-1 rounded-full">Therapist</span>
             <h2 class="text-2xl font-bold mt-3 mb-1 tracking-wide">KIOKO NJERI</h2>
-            <p class="text-teal-100 text-sm font-light mb-4">Certified Counseling Psychologist</p>
+            <p class="text-teal-100 text-sm font-light mb-4">Counseling Psychologist</p>
             <div class="h-[1px] bg-teal-600/50 my-4"></div>
             <p class="text-sm text-teal-50/90 leading-relaxed italic">
-                "Jibonge template offers a judgment-free environment where you can speak out, heal, and rediscover your peace."
+                "A judgment-free environment where you can speak out, heal, and rediscover your peace. Reach out today to schedule your session."
             </p>
         </section>
 
-        <!-- Booking Form Section -->
-        <section class="bg-white rounded-3xl p-6 shadow-sm border border-stone-100 space-y-6">
-            <h3 class="text-lg font-semibold text-stone-900 flex items-center gap-2">
-                🗓️ Book Your Session
+        <!-- Session Options & Operational Sites -->
+        <section class="bg-white rounded-3xl p-6 shadow-sm border border-stone-100 space-y-4">
+            <h3 class="text-base font-bold text-stone-900 uppercase tracking-wider text-xs text-teal-700">
+                Available Session Types
             </h3>
             
-            <form id="bookingForm" class="space-y-4">
-                <!-- Client Details -->
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">Your Full Name</label>
-                    <input type="text" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-white transition" placeholder="John Doe">
+            <!-- Online Session Option -->
+            <div class="p-4 bg-stone-50 rounded-2xl border border-stone-100">
+                <div class="flex items-center gap-3 mb-1">
+                    <span class="text-xl">🌐</span>
+                    <h4 class="font-semibold text-sm text-stone-900">Online Therapy</h4>
                 </div>
+                <p class="text-xs text-stone-500 pl-8">Convenient, confidential video or voice sessions from the comfort of your home.</p>
+            </div>
 
-                <!-- Session Type Selection -->
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-2">Session Type</label>
-                    <div class="grid grid-cols-2 gap-3">
-                        <label class="border-2 border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer hover:border-teal-600 transition target-radio">
-                            <input type="radio" name="sessionType" value="online" checked class="sr-only" onchange="toggleLocationField()">
-                            <span class="text-lg">🌐</span>
-                            <span class="text-xs font-medium mt-1">Online Video</span>
-                        </label>
-                        <label class="border-2 border-stone-200 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer hover:border-teal-600 transition target-radio">
-                            <input type="radio" name="sessionType" value="1on1" class="sr-only" onchange="toggleLocationField()">
-                            <span class="text-lg">🤝</span>
-                            <span class="text-xs font-medium mt-1">1-on-1 Physical</span>
-                        </label>
-                    </div>
+            <!-- 1 on 1 Physical Session Option -->
+            <div class="p-4 bg-stone-50 rounded-2xl border border-stone-100 space-y-3">
+                <div class="flex items-center gap-3">
+                    <span class="text-xl">🤝</span>
+                    <h4 class="font-semibold text-sm text-stone-900">1-on-1 Physical Sessions</h4>
                 </div>
-
-                <!-- Conditional Location Dropdown (Hidden by default) -->
-                <div id="locationWrapper" class="hidden transition-all duration-300">
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">Select Closest Site</label>
-                    <select id="location" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-white transition">
-                        <option value="Spur Mall">Spur Mall</option>
-                        <option value="Juja City Mall">Juja City Mall</option>
-                        <option value="TRM">TRM (Thika Road Mall)</option>
-                        <option value="Garden City Mall">Garden City Mall</option>
-                        <option value="Village Market">Village Market</option>
-                    </select>
+                <p class="text-xs text-stone-500 pl-8">Meet physically at any of our quiet, dedicated therapy hubs. Choose the site closest to you:</p>
+                
+                <!-- Operational Sites Tags -->
+                <div class="pl-8 flex flex-wrap gap-2">
+                    <span class="bg-white border border-stone-200 text-stone-700 text-xs px-2.5 py-1 rounded-lg font-medium shadow-sm">Spur Mall</span>
+                    <span class="bg-white border border-stone-200 text-stone-700 text-xs px-2.5 py-1 rounded-lg font-medium shadow-sm">Juja City Mall</span>
+                    <span class="bg-white border border-stone-200 text-stone-700 text-xs px-2.5 py-1 rounded-lg font-medium shadow-sm">TRM</span>
+                    <span class="bg-white border border-stone-200 text-stone-700 text-xs px-2.5 py-1 rounded-lg font-medium shadow-sm">Garden City Mall</span>
+                    <span class="bg-white border border-stone-200 text-stone-700 text-xs px-2.5 py-1 rounded-lg font-medium shadow-sm">Village Market</span>
                 </div>
-
-                <!-- Date & Time -->
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">Preferred Date</label>
-                        <input type="date" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-white transition">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">Preferred Time</label>
-                        <input type="time" required class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:bg-white transition">
-                    </div>
-                </div>
-
-                <!-- Submit Button to Trigger Payment Details -->
-                <button type="button" onclick="showPaymentSection()" class="w-full bg-teal-700 hover:bg-teal-800 text-white font-semibold rounded-xl py-3.5 text-sm transition shadow-md shadow-teal-700/10 active:scale-[0.98]">
-                    Proceed to Payment Details
-                </button>
-            </form>
+            </div>
         </section>
 
-        <!-- Dynamic Payment Info Section -->
-        <section id="paymentSection" class="hidden bg-white rounded-3xl p-6 shadow-sm border border-stone-100 space-y-4 transition-all duration-300">
-            <div class="flex items-center justify-between">
-                <h3 class="text-lg font-semibold text-stone-900 flex items-center gap-2">
-                    💳 Payment & Contact Channels
+        <!-- Payment & Contact Section (Separated distinctly for easy phone use) -->
+        <section class="bg-white rounded-3xl p-6 shadow-sm border border-stone-100 space-y-4">
+            <div>
+                <h3 class="text-base font-bold text-stone-900 uppercase tracking-wider text-xs text-teal-700">
+                    Payment & Direct Contacts
                 </h3>
-                <span class="bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Action Required</span>
+                <p class="text-xs text-stone-500 mt-1">Tap below to copy payment details, call directly, or send an email to book.</p>
             </div>
-            <p class="text-xs text-stone-500">Please pay via M-Pesa using the details below to secure your booking confirmation.</p>
 
-            <!-- Stacked distinct layout blocks for clear view on phones -->
-            <div class="space-y-3 pt-2">
+            <div class="space-y-3 pt-1">
                 <!-- MPESA Section -->
                 <div class="bg-emerald-50/60 border border-emerald-100 rounded-2xl p-4 flex items-center justify-between">
                     <div>
-                        <p class="text-[10px] uppercase font-bold tracking-wider text-emerald-700">M-Pesa Mobile Money</p>
+                        <p class="text-[10px] uppercase font-bold tracking-wider text-emerald-700">M-Pesa Payment Number</p>
                         <p class="text-base font-bold text-stone-900 mt-0.5">0794771937</p>
                     </div>
-                    <button onclick="copyData('0794771937', 'Mpesa Number')" class="bg-white hover:bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-xl border border-emerald-200 shadow-sm transition active:scale-95">
+                    <button onclick="copyData('0794771937', 'M-Pesa Number')" class="bg-white hover:bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-xl border border-emerald-200 shadow-sm transition active:scale-95">
                         Copy
                     </button>
                 </div>
@@ -128,7 +99,7 @@
                         <p class="text-[10px] uppercase font-bold tracking-wider text-sky-700">Direct Contact Line</p>
                         <p class="text-base font-bold text-stone-900 mt-0.5">0794771937</p>
                     </div>
-                    <a href="tel:0794771937" class="bg-white hover:bg-sky-100 text-sky-700 text-xs font-semibold px-3 py-1.5 rounded-xl border border-sky-200 shadow-sm transition active:scale-95 text-center">
+                    <a href="tel:0794771937" class="bg-white hover:bg-sky-100 text-sky-700 text-xs font-semibold px-4 py-1.5 rounded-xl border border-sky-200 shadow-sm transition active:scale-95 text-center">
                         Call
                     </a>
                 </div>
@@ -139,58 +110,26 @@
                         <p class="text-[10px] uppercase font-bold tracking-wider text-purple-700">Official Email Support</p>
                         <p class="text-base font-bold text-stone-900 mt-0.5">talk@jibonge.com</p>
                     </div>
-                    <button onclick="copyData('talk@jibonge.com', 'Email Address')" class="bg-white hover:bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1.5 rounded-xl border border-purple-200 shadow-sm transition active:scale-95">
-                        Copy
-                    </button>
+                    <a href="mailto:talk@jibonge.com" class="bg-white hover:bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1.5 rounded-xl border border-purple-200 shadow-sm transition active:scale-95">
+                        Email
+                    </a>
                 </div>
             </div>
-
-            <!-- Complete booking execution simulation -->
-            <button onclick="completeBookingSimulation()" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-medium rounded-xl py-3 text-xs tracking-wide transition mt-4">
-                I Have Sent the Payment
-            </button>
         </section>
 
     </main>
 
-    <!-- Simple Feedback Notification Alert Component -->
+    <!-- Visual Feedback Toast Component -->
     <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-stone-900 text-white text-xs px-4 py-3 rounded-full shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none z-50 text-center min-w-[240px]">
-        Copied to clipboard!
+        Copied successfully!
     </div>
 
-    <!-- Active Interface Interaction Logic Scripts -->
+    <!-- Script logic for clean copy feedback -->
     <script>
-        // Adjust interface styling based on initial Selection state
-        function toggleLocationField() {
-            const checkedSessionType = document.querySelector('input[name="sessionType"]:checked').value;
-            const locationWrapper = document.getElementById('locationWrapper');
-            
-            if (checkedSessionType === '1on1') {
-                locationWrapper.classList.remove('hidden');
-                // Auto focus styling context setup
-                document.getElementById('location').focus();
-            } else {
-                locationWrapper.classList.add('hidden');
-            }
-        }
-
-        // Display payment layout blocks seamlessly
-        function showPaymentSection() {
-            const form = document.getElementById('bookingForm');
-            if (form.checkValidity()) {
-                const paymentSec = document.getElementById('paymentSection');
-                paymentSec.classList.remove('hidden');
-                paymentSec.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                alert("Please fill out all the fields in the booking section first.");
-            }
-        }
-
-        // Handle text copy execution on mobile browsers
         function copyData(textToCopy, fieldName) {
             navigator.clipboard.writeText(textToCopy).then(() => {
                 const toast = document.getElementById('toastNotification');
-                toast.innerText = `${fieldName} copied successfully!`;
+                toast.innerText = `${fieldName} copied to clipboard!`;
                 toast.classList.remove('opacity-0');
                 
                 setTimeout(() => {
@@ -200,15 +139,6 @@
                 console.error('Could not copy text: ', err);
             });
         }
-
-        // Completion interface feedback action block
-        function completeBookingSimulation() {
-            alert("Thank you! Kioko Njeri will review your details and send a confirmation text/link shortly.");
-            window.location.reload();
-        }
-
-        // Initialize state configuration layout markers
-        toggleLocationField();
     </script>
 </body>
-</html>
+                                               </html>
